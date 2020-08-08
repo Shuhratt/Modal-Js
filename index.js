@@ -3,7 +3,6 @@ const modal = $.modal({
     content: 'My Content',
     closable: true,
     width: '400px'
-
     // onOpen: function (e) {
     //     console.log(e)
     // }

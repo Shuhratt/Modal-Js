@@ -1,3 +1,10 @@
+    // function _createModalFooter(buttons = []) {
+    //     if (buttons.length == 0){
+    //         return document.createElement('div')
+    //     } else{
+    //
+    //     }
+    // }
 
     function _createModal(options){
         const DEFAULT_WIDTH = '600px';
@@ -15,8 +22,8 @@
                         <p>${options.content || ''}</p>
                     </div>
                     <div class="modal-footer">
-                        <button>Ok</button>
-                        <button>Close</button>
+                          <button class="btn btn-primary">Ok</button>
+                          <button class="btn btn-secondary">Back</button>
                     </div>
                 </div>
             </div>
