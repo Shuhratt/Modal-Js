@@ -58,7 +58,6 @@
 
         const listenter = function(event){
             if (event.target.dataset.close){
-
                 console.log('121212')
                 modal.close();
             }
