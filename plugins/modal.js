@@ -48,17 +48,22 @@
 
         const modal = {
             open(){
-                $modal.classList.add('open')
+                $modal.classList.add('open');
+                if (typeof options.onOpen  === 'function'){
+                    options.onOpen();
+                }
             },
 
             close() {
                 $modal.classList.remove('open')
+                if (typeof options.onClose  === 'function'){
+                    options.onClose();
+                }
             },
         }
 
         const listenter = function(event){
             if (event.target.dataset.close){
-                console.log('121212')
                 modal.close();
             }
         }
@@ -70,6 +75,7 @@
                 $modal.parentNode.removeChild($modal);// parentNode Возвращает родителя определенного элемента DOM дерева.
                 $modal.removeEventListener('click', listenter)
                 distoyed = true
+
             }
         });
 

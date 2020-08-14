@@ -28,10 +28,13 @@ render();
 const priceModal = $.modal({
     title: 'Цена на товар',
     closable: true,
-    width: '400px'
-    // onOpen: function (e) {
-    //     console.log(e)
-    // }
+    width: '400px',
+    onClose: function () {
+        console.log('оКно закрыто')
+    },
+    onOpen: function () {
+        console.log('Окно открыто')
+    }
 });
 
 document.addEventListener('click', function (event) {
